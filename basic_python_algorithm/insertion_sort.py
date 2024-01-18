@@ -1,6 +1,13 @@
 # Ex: array = [2, 8, 4, 1, 3, 7, 6, 5]
 #    sorted_array = [1, 2, 3, 4, 5, 6, 7, 8]
 
+"""
+Insertion sort algorithm:
+    1. We need an outer loop from the second index
+    2. We need an inner loop to compare the current value to the privious value
+    3. We need to swap them if the current value is smaller than the privious value
+"""
+
 def insertion_sort(array):
     # We need an outer loop from the second index
     for i in range(1, len(array)):
