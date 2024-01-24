@@ -23,12 +23,12 @@ def insertion_sort(array):
 
 def advanced_insertion(arr):
     for i in range(1, len(arr)):
-        key = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] > key:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
+        key = arr[i] # current value
+        j = i - 1 # privious index
+        while j >= 0 and arr[j] > key: # compare the current value to the privious value
+            arr[j + 1] = arr[j] # swap them if the current value is smaller than the privious value
+            j -= 1 # decrease the index to further comparing
+        arr[j + 1] = key 
 
     return arr
 
