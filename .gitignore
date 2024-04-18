@@ -27,3 +27,10 @@ node_modules
 .docusaurus
 build
 docs/build
+/.vscode
+# Ignore compiled program files
+*.exe       # Windows executables
+*.out       # Executable files
+*.so        # Shared library files
+*.dylib     # macOS dynamic libraries
+*.dll       # Windows dynamic link library files
