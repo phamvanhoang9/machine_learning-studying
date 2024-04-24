@@ -1,5 +1,5 @@
 from typing import List
-
+import time
 
 # class Solution:
 #     def maxProfit(self, prices: List[int]) -> int:
@@ -30,4 +30,8 @@ if __name__ == "__main__":
     s = Solution()
     prices = [7, 1, 5, 3, 6, 4]
     # prices = [7, 6, 4, 3, 1]
+    start = time.time()
     print(s.maxProfit(prices))
+    end = time.time()
+
+    print("Duration: ", (end - start)*1_000_000)
