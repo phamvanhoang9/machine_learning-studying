@@ -1,21 +1,13 @@
 from typing import List 
 
 
-# class Solution:
-#     def canJump(self, nums: List[int]) -> bool:
-#         max_jump_idx = len(nums) - 1
-#         i = 1
-#         while (i < len(nums)-1):
-#             idx = nums[i]
-#             if idx == 0:
-#                 return False
-#             step = i + idx
-#             if (step == max_jump_idx):
-#                 return True
-#             elif (step < max_jump_idx):
-#                 i = step 
-        
-#         return False
+class Solution:
+    def canJump(self, nums: List[int]) -> bool:
+        goal = len(nums) - 1
+        for i in range(len(nums))[::-1]:
+            if i + nums[i] >= goal:
+                goal = i
+        return not goal
     
 if __name__ == "__main__":
     s = Solution()
