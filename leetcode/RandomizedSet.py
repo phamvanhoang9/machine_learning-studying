@@ -29,7 +29,7 @@ class RandomizedSet:
         """
         Removes a value from the set. Returns true if the set contained the specified element.
         """
-        if val not in self.data_dict:
+        if val not in self.data_dict: 
             return False
         idx = self.data_dict[val] # get the index of the value to be removed
         last_val = self.data[-1] # get the last value in the list
