@@ -41,3 +41,11 @@ public:
         return v[rand()%v.size()]; // using % to get a random index in v
     }
 };
+
+int main() {
+    RandomizedSet* obj = new RandomizedSet(); // create a new object
+    bool param_1 = obj->insert(1); // insert 1
+    bool param_2 = obj->remove(2); // remove 2
+    int param_3 = obj->getRandom(); // get a random element
+    return 0; // return 0
+}
