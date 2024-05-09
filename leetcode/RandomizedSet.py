@@ -34,7 +34,9 @@ class RandomizedSet:
         idx = self.data_dict[val] # get the index of the value to be removed
         last_val = self.data[-1] # get the last value in the list
         self.data[idx] = last_val # replace the value to be removed with the last value
+        print(self.data)
         self.data_dict[last_val] = idx # update the index of the last value
+        print(self.data_dict)
         self.data.pop() # remove the last value
         del self.data_dict[val] # remove the value from the dictionary
         return self.data, self.data_dict
