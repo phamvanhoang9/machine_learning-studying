@@ -150,6 +150,45 @@ class SinglyLinkedList:
                 current = current.next_node
         
         return None
+    
+    def remove_at_index(self, index):
+        """
+        Removes Node at specified index
+        Takes O(n) time
+        """
+
+        if index >= self.__count:
+            raise IndexError('index out of range')
+        
+        current = self.head
+
+        if index == 0:
+            self.head = current.next_node
+            self.__count -= 1
+            return current
+        
+        position = index
+        
+        while position > 1:
+            current = current.next_node 
+            position -= 1
+
+        prev_node = current 
+        current = current.next_node 
+        next_node = current.next_node
+        prev_node.next_node = next_node
+        
+        self.__count -= 1
+
+        return current
+    
+    # using __iter__ and __repr__ to print the linked list
+    def __iter__(self):
+        current = self.head
+
+        while current:
+            yield current # yield is a keyword that is used like return, except the function will return a generator
+            current = current.next_node 
 
     def __repr__(self):
         """ 
